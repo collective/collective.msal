@@ -1,6 +1,16 @@
 # -*- coding: utf-8 -*-
 """Init and utils."""
-from zope.i18nmessageid import MessageFactory
+from AccessControl.Permissions import add_user_folders
+from Products.PluggableAuthService import registerMultiPlugin
+from .plugin import MSALAuthPlugin
 
 
-_ = MessageFactory('collective.msal')
+def initialize(context):
+    registerMultiPlugin(MSALAuthPlugin.meta_type)
+    context.registerClass(
+        MSALAuthPlugin,
+        permission=add_user_folders,
+        #icon=os.path.join(zmidir, "ldap.png"),
+        #        constructors=(manage_addLDAPPluginForm, manage_addLDAPPlugin),
+        visibility=None,
+    )

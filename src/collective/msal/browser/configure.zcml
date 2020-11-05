@@ -13,9 +13,24 @@
 
   <!-- Publish static files -->
   <plone:static
-      name="collective.msal"
+      name="msal"
       type="plone"
       directory="static"
       />
+
+    <browser:page
+        name="collective.msal.getAToken"
+        for="*"
+        permission="zope2.View"
+        class=".auth.AuthTokenView"
+        />
+
+
+    <browser:view
+        name="collective.msal.login"
+        for="*"
+        permission="zope2.View"
+        class=".auth.LoginView"
+        />
 
 </configure>
