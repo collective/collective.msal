@@ -1,0 +1,5 @@
+===============
+collective.msal
+===============
+
+User documentation
