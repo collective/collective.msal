@@ -33,8 +33,8 @@ Features
 --------
 
 Simple PAS plugin that allows to a Microsoft Tenant users to authenticate on Plone. It relies on:
- - Microsoft Authentication Library (MSAL Python library)
- - plone.session (PAS plugin)
+ - `Microsoft Authentication Library (MSAL Python library) <https://pypi.org/project/msal/>`_
+ - `plone.session (PAS plugin) <https://pypi.org/project/plone.session/>`_
 
 Documentation
 -------------
@@ -45,7 +45,7 @@ it creates a local plone.session token keeping the plone user authenticated.
 User documentation (in short)
 #############################
 
-1. Setup an Azure App on Microsoft Azure Portal
+1. Setup an Azure App on `Microsoft Azure Portal <https://portal.azure.com/#home>`_
 2. Configure environment vars in buildout configuration/ZMI
 3. Install the product collective.msal in plone control panel
 4. Use the [sign in with microsoft] button, that has been added to the login form, to authenticate
