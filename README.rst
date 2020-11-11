@@ -113,16 +113,15 @@ and then running ``bin/buildout -Nv``
 Contribute
 ----------
 
-.. - Issue Tracker: https://github.com/collective/collective.msal/issues
-- Issue Tracker: https://github.com/sauzher/collective.msal/issues
-.. - Source Code: https://github.com/collective/collective.msal
-- Source Code: https://github.com/sauzher/collective.msal
+- Issue Tracker: https://github.com/collective/collective.msal/issues
+- Source Code: https://github.com/collective/collective.msal
+
 .. - Documentation: https://docs.plone.org/foo/bar
 
 Support
 -------
 
-If you are having issues, please let me know opening an issue here https://github.com/sauzher/collective.msal/issues
+If you are having issues, please let me know opening an issue here https://github.com/collective/collective.msal/issues
 
 
 License
