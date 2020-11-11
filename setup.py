@@ -14,7 +14,7 @@ long_description = '\n\n'.join([
 
 setup(
     name='collective.msal',
-    version='1.0a1',
+    version='1.0b1',
     description="A simple Plone PAS plugin to authenticate users on the Microsoft Azure Tenants",
     long_description=long_description,
     # Get more from https://pypi.org/classifiers/

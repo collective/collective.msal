@@ -7,7 +7,7 @@ from BTrees import OOBTree
 from Products.PluggableAuthService.UserPropertySheet import UserPropertySheet
 from Products.PluggableAuthService.interfaces import plugins as pas_interfaces
 from Products.PluggableAuthService.plugins.BasePlugin import BasePlugin
-from collective.msal.interfaces import ICollectiveMsalLayer
+from collective.msal.interfaces import ICollectiveMsal
 from collective.msal.config import logger
 from plone import api
 from zope.interface import implementer
@@ -31,11 +31,7 @@ def url_for(code, **kw):
     return api.portal.get().absolute_url() + routes.get(code, '404')
 
 
-@implementer(ICollectiveMsalLayer,
-             pas_interfaces.IPropertiesPlugin,
-             pas_interfaces.IUserEnumerationPlugin,
-             pas_interfaces.IRolesPlugin,
-             )
+@implementer(ICollectiveMsal)
 class MSALAuthPlugin(BasePlugin):
     """Multi-plugin to do MSAzure authentication
 
