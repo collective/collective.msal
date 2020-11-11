@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Class: WindowsauthpluginHelper
+"""Class:  MSALAuthPlugin
 """
 from AccessControl.SecurityInfo import ClassSecurityInfo
 from App.class_init import InitializeClass
