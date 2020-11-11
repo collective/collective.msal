@@ -56,20 +56,15 @@ User documentation (little bit longer)
 You have to:
 
 In the Azure Microsoft Platform:
-    a. Register your application
-    This will provides you the CLIENT_ID and directory id of the tenant you will use as AUTHORITY parameter
-
-    b. Configure your application in order to generate a CLIENT_SECRET
-    c. Define a REDIRECT_PATH (by default: /collective.msal.getAToken)
-    You can set these parameters as enviroment variabiles in buildout configuration  (see `Installation`_)
-    d. Setup other Azure stuff according to Microsoft Documentation
+    1. Register your application. This will provides you the CLIENT_ID and directory id of the tenant you will use as AUTHORITY parameter
+    2. Configure your application in order to generate a CLIENT_SECRET
+    3. Define a REDIRECT_PATH (by default: /collective.msal.getAToken). You can set these parameters as enviroment variabiles in buildout configuration  (see `Installation`_)
+    4. Setup other Azure stuff according to Microsoft Documentation
 
 Locally:
-    a. In the instance buildout section: set environment variables properly. see `Installation`_
-    b. In Plone: Install the product via plone control panel
-    This will adds a Plone/acl_users/acl_msal plugin and overrides (z3c.jbot) the login form adding the Microsoft sign in button
-    c. In ZMI Plone -> acl_users -> acl_msal -> Properties TAB: Verify the parameters CLIENT_ID, CLIENT_SECRET, AUTHORITY, and REDIRECT_PATH
-    (this one by default should point to /collective.msal.getAToken)
+    1. In the instance buildout section: set environment variables properly. see `Installation`_
+    2. In Plone: Install the product via plone control panel. This will adds a Plone/acl_users/acl_msal plugin and overrides (z3c.jbot) the login form adding the Microsoft sign in button
+    3. In ZMI Plone -> acl_users -> acl_msal -> Properties TAB: Verify the parameters CLIENT_ID, CLIENT_SECRET, AUTHORITY, and REDIRECT_PATH (this one by default should point to /collective.msal.getAToken)
 
 If you want to write down your login form you may want to use the followig helper to generate the login href::
 
