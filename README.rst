@@ -43,28 +43,33 @@ The authentication happens on the Microsoft server side and then, if succeeded,
 it creates a local plone.session token keeping the plone user authenticated.
 
 User documentation (in short)
-##########################
-   0. Setup an Azure App on Microsoft Azure Portal
-   1. Configure environment vars in buildout configuration/ZMI
-   2. Install the product collective.msal in plone control panel
-   3. Use the [sign in with microsoft] button, that has been added to the login form, to authenticate
-   4. enjoy
+#############################
+
+1. Setup an Azure App on Microsoft Azure Portal
+2. Configure environment vars in buildout configuration/ZMI
+3. Install the product collective.msal in plone control panel
+4. Use the [sign in with microsoft] button, that has been added to the login form, to authenticate
+5. enjoy
 
 User documentation (little bit longer)
 ######################################
 
-You have to:
+You have to setup your APP separately on Microsoft Azure portal first; then locally.
 
 In the Azure Microsoft Platform:
-    1. Register your application. This will provides you the CLIENT_ID and directory id of the tenant you will use as AUTHORITY parameter
-    2. Configure your application in order to generate a CLIENT_SECRET
-    3. Define a REDIRECT_PATH (by default: /collective.msal.getAToken). You can set these parameters as enviroment variabiles in buildout configuration  (see `Installation`_)
-    4. Setup other Azure stuff according to Microsoft Documentation
+********************************
+
+1. Register your application. This will provides you the CLIENT_ID and directory id of the tenant you will use as AUTHORITY parameter
+2. Configure your application in order to generate a CLIENT_SECRET
+3. Define a REDIRECT_PATH (by default: /collective.msal.getAToken). You can set these parameters as enviroment variabiles in buildout configuration  (see `Installation`_)
+4. Setup other Azure stuff according to Microsoft Documentation
 
 Locally:
-    1. In the instance buildout section: set environment variables properly. see `Installation`_
-    2. In Plone: Install the product via plone control panel. This will adds a Plone/acl_users/acl_msal plugin and overrides (z3c.jbot) the login form adding the Microsoft sign in button
-    3. In ZMI Plone -> acl_users -> acl_msal -> Properties TAB: Verify the parameters CLIENT_ID, CLIENT_SECRET, AUTHORITY, and REDIRECT_PATH (this one by default should point to /collective.msal.getAToken)
+********
+
+5. In the instance buildout section: set environment variables properly. see `Installation`_
+6. In Plone: Install the product via plone control panel. This will adds a Plone/acl_users/acl_msal plugin and overrides (z3c.jbot) the login form adding the Microsoft sign in button
+7. In ZMI Plone -> acl_users -> acl_msal -> Properties TAB: Verify the parameters CLIENT_ID, CLIENT_SECRET, AUTHORITY, and REDIRECT_PATH (this one by default should point to /collective.msal.getAToken)
 
 If you want to write down your login form you may want to use the followig helper to generate the login href::
 
